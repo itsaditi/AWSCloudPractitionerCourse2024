@@ -125,10 +125,9 @@
 
 ## Scaling EC2
 
-<aside>
-💡 “Everything fails all the time, so plan for failure and nothing fails.”
-
-</aside>
+```
+**Everything fails all the time, so plan for failure and nothing fails**
+```
 
 **Basic definitions -** 
 
