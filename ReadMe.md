@@ -173,7 +173,7 @@
 - Method of distributing network traffic equally across a pool of resources that support an application.
 - LB is a device that sits between the user and the server group and acts an an invisible facilitator, ensuring that all resource server are used equally.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%201.png)
+![image.png](img/image%201.png)
 
 ### Benefits of LB
 
@@ -350,7 +350,7 @@ When determining the right Region for your services, data, and applications, con
 - *When you launch an Amazon EC2 instance, it launches a virtual machine on a physical hardware that is installed in an Availability Zone.*
 - **Each AWS region consists of multiple isolated and physically separated AZ with a geographic region.**
 
-![Screenshot 2024-10-12 at 3.43.19 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-12_at_3.43.19_PM.png)
+![Screenshot 2024-10-12 at 3.43.19 PM.png](img/Screenshot_2024-10-12_at_3.43.19_PM.png)
 
 - AZ are build next to each other because if large scale incident were to occur (natural disaster), one could lose connectivity to everything in that AZ.
 - Availability Zones are located **tens of miles apart from each other**. This is **close enough to have low latency** (the time between when content requested and received) between Availability Zones.
@@ -367,7 +367,7 @@ When determining the right Region for your services, data, and applications, con
 - **Example → ELB is actually a regional construct.** It runs across all Availability Zones, communicating with the EC2 instances that are running in a specific Availability Zone.
 - Regional services are by definition already highly available at no additional cost of effort on your part.
     
-    ![Screenshot 2024-10-12 at 3.55.34 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-12_at_3.55.34_PM.png)
+    ![Screenshot 2024-10-12 at 3.55.34 PM.png](img/Screenshot_2024-10-12_at_3.55.34_PM.png)
     
 
 ## Edge Locations
@@ -475,7 +475,7 @@ When determining the right Region for your services, data, and applications, con
 - An internet gateway is a connection between a VPC and the internet.
 - Without an internet gateway, no one can access the resources within your VPC.
 
-![Screenshot 2024-10-12 at 6.21.12 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-12_at_6.21.12_PM.png)
+![Screenshot 2024-10-12 at 6.21.12 PM.png](img/Screenshot_2024-10-12_at_6.21.12_PM.png)
 
 ### Virtual Private Gateway
 
@@ -492,7 +492,7 @@ When determining the right Region for your services, data, and applications, con
 - A virtual private gateway allows traffic into the VPC **only if it is coming from an approved network**.
 - Susceptible to downtime and high-traffic as even though they are private and they are encrypted, but they still use a regular internet connection that has bandwidth that is being shared by many people using the internet.
 
-![Screenshot 2024-10-12 at 6.22.24 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-12_at_6.22.24_PM.png)
+![Screenshot 2024-10-12 at 6.22.24 PM.png](img/Screenshot_2024-10-12_at_6.22.24_PM.png)
 
 ### AWS Direct Connect
 
@@ -508,7 +508,7 @@ When determining the right Region for your services, data, and applications, con
 - This can help you meet **high regulatory and compliance needs**, as well as sidestep any potential bandwidth issues.
 - The private connection that AWS Direct Connect provides helps you to **reduce network costs and increase the amount of bandwidth** that can travel through your network.
 
-![Screenshot 2024-10-12 at 6.25.01 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-12_at_6.25.01_PM.png)
+![Screenshot 2024-10-12 at 6.25.01 PM.png](img/Screenshot_2024-10-12_at_6.25.01_PM.png)
 
 - **Note**: It's also important to note that **one VPC might have multiple types of gateways attached for multiple types of resources all residing in the same VPC**, just in different subnets.
 
@@ -526,7 +526,7 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 - **In a VPC, subnets can communicate with each other**. For example →
     - you might have an application that involves Amazon EC2 instances in a public subnet communicating with databases that are located in a private subnet.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%202.png)
+![image.png](img/image%202.png)
 
 - When a customer requests data from an application hosted in the AWS Cloud, this request is sent as a packet.
 - **A packet is a unit of data sent over the internet or a network.**
@@ -551,7 +551,7 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 - Additionally, **all network ACLs have an explicit deny rule**. This rule ensures that if a packet doesn’t match any of the other rules on the list, the packet is denied.
 - NACL checks inbound and outbound traffic.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%203.png)
+![image.png](img/image%203.png)
 
 ### Stateless Packet Filtering
 
@@ -559,7 +559,7 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 - When a packet response for that request comes back to the subnet, **the network ACL does not remember your previous request**.
 - The network ACL checks the packet response against its list of rules to determine whether to allow or deny.
 
-![Screenshot 2024-10-12 at 7.14.26 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-12_at_7.14.26_PM.png)
+![Screenshot 2024-10-12 at 7.14.26 PM.png](img/Screenshot_2024-10-12_at_7.14.26_PM.png)
 
 ## Security Groups → At EC2 level
 
@@ -581,7 +581,7 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 
 ### Round Trip from One Instance to Another
 
-![Subnet and NACL.jpeg](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/63bad7b5-73f9-4188-ade0-f6d5953efaf4.png)
+![Subnet and NACL.jpeg](img/63bad7b5-73f9-4188-ade0-f6d5953efaf4.png)
 
 - Let's start with instance A. We wanna send a packet from instance A to instance B in a different subnet, same VPC.
 - So instance A sends the packet. Now, the first thing that happens is that packet meets the boundary of the security group of instance A. By default, all outbound traffic is allowed from a security group. The packet made it past the security group of instance A.
@@ -627,7 +627,7 @@ For example, suppose that you want to visit AnyCompany’s website.
 2. The customer DNS resolver asks the company’s DNS server for the IP address that corresponds to AnyCompany’s website.
 3. The company DNS server responds by providing the IP address for AnyCompany’s website, 192.0.2.0.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%204.png)
+![image.png](img/image%204.png)
 
 ## Amazon Route 53
 
@@ -648,7 +648,7 @@ Suppose that AnyCompany’s application is running on several Amazon EC2 instanc
 4. The customer’s request is sent to the nearest edge location through Amazon CloudFront.
 5. Amazon CloudFront connects to the Application Load Balancer, which sends the incoming packet to an Amazon EC2 instance.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%205.png)
+![image.png](img/image%205.png)
 
 # Storage and Databases
 
@@ -679,15 +679,15 @@ Suppose that AnyCompany’s application is running on several Amazon EC2 instanc
 
 **An Amazon EC2 instance with an attached instance store is running.**
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%206.png)
+![image.png](img/image%206.png)
 
 **The instance is stopped or terminated.**
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%207.png)
+![image.png](img/image%207.png)
 
 All data on the attached instance store is deleted.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%208.png)
+![image.png](img/image%208.png)
 
 - Amazon EC2 instances are virtual servers.
 - If you start an instance from a stopped state, the instance **might start on another host**, where the previously used instance store volume does not exist.
@@ -716,7 +716,7 @@ All data on the attached instance store is deleted.
     - Incremental backups are different from full backups, in which **all the data in a storage volume copies each time a backup occurs**.
     - The full backup includes **data that has not changed since the most recent backup**.
         
-        ![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%209.png)
+        ![image.png](img/image%209.png)
         
 
 ## Object Storage
@@ -726,7 +726,7 @@ All data on the attached instance store is deleted.
 - Metadata → contains information about **what the data is, how it is used, the object size**, and so on.
 - Key → An object’s key is its **unique identifier**.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2010.png)
+![image.png](img/image%2010.png)
 
 <aside>
 💡
@@ -1023,7 +1023,7 @@ Amazon RDS is available on six database engines, which optimize for memory, perf
     - Amazon RDS
     
 
-![Screenshot 2024-10-13 at 1.38.56 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-13_at_1.38.56_PM.png)
+![Screenshot 2024-10-13 at 1.38.56 PM.png](img/Screenshot_2024-10-13_at_1.38.56_PM.png)
 
 ### Heterogenous Databases
 
@@ -1039,7 +1039,7 @@ Amazon RDS is available on six database engines, which optimize for memory, perf
 - To develop and test against production data, but without affecting production users.
 - In this case, you use DMS to migrate a copy of your production database to your dev or test environments, either once-off or continuously.
 
-![Screenshot 2024-10-13 at 1.45.13 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-13_at_1.45.13_PM.png)
+![Screenshot 2024-10-13 at 1.45.13 PM.png](img/Screenshot_2024-10-13_at_1.45.13_PM.png)
 
 **Database Consolidation →**
 
@@ -1047,12 +1047,12 @@ Amazon RDS is available on six database engines, which optimize for memory, perf
 
 - Combining several databases into a single database
 
-![Screenshot 2024-10-13 at 1.45.21 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-13_at_1.45.21_PM.png)
+![Screenshot 2024-10-13 at 1.45.21 PM.png](img/Screenshot_2024-10-13_at_1.45.21_PM.png)
 
 - Sending ongoing copies of your data to other target sources instead of doing a one-time migration.
 - This could be for disaster recovery or because of geographic separation.
     
-    ![Screenshot 2024-10-13 at 1.45.27 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-13_at_1.45.27_PM.png)
+    ![Screenshot 2024-10-13 at 1.45.27 PM.png](img/Screenshot_2024-10-13_at_1.45.27_PM.png)
     
 
 ## Additional Database Services
@@ -1102,7 +1102,7 @@ In this module, you will learn how to:
 
 ## AWS Shared Responsibility Model
 
-![Screenshot 2024-10-19 at 9.07.30 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-19_at_9.07.30_PM.png)
+![Screenshot 2024-10-19 at 9.07.30 PM.png](img/Screenshot_2024-10-19_at_9.07.30_PM.png)
 
 - Both customer and AWS is responsible for keeping AWS resources secure.
     - Reason being you **do not treat your AWS environment as a single object**.
@@ -1191,7 +1191,7 @@ In this module, you will learn how to:
 - **By default**, when you create a new IAM user in AWS, **it has no permissions associated with it**.
 - To allow the IAM user to perform specific actions in AWS, such as launching an Amazon EC2 instance or creating an Amazon S3 bucket, **you must grant the IAM user the necessary permissions**.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2011.png)
+![image.png](img/image%2011.png)
 
 <aside>
 💡
@@ -1223,7 +1223,7 @@ For example, if an employee needs access to only a specific bucket, specify the 
 
 </aside>
 
-![Screenshot 2024-10-20 at 5.47.47 PM.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/Screenshot_2024-10-20_at_5.47.47_PM.png)
+![Screenshot 2024-10-20 at 5.47.47 PM.png](img/Screenshot_2024-10-20_at_5.47.47_PM.png)
 
 *This example IAM policy allows permission to access the objects in the Amazon S3 bucket with ID: AWSDOC-EXAMPLE-BUCKET.*
 
@@ -1240,7 +1240,7 @@ The IAM policy is **allowing** an action of ”**returning some or all of object
 
 - When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2012.png)
+![image.png](img/image%2012.png)
 
 ### IAM Roles
 
@@ -1333,7 +1333,7 @@ AWS Artifact **provides access to AWS security and compliance documents**, such 
 
 </aside>
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2013.png)
+![image.png](img/image%2013.png)
 
 For example →
 
@@ -1342,7 +1342,7 @@ For example →
 
 ## Distributed Denial-of-Service Attacks
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2014.png)
+![image.png](img/image%2014.png)
 
 - In a distributed denial-of-service (DDoS) attack, **multiple sources are used to start an attack** that aims to make a website or application unavailable.
 - This can come **from a group of attackers, or even a single attacker.**
@@ -1501,7 +1501,7 @@ Threat Detection Service
 - A service that provides intelligent threat detection for your AWS infrastructure and resources.
 - **It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment.**
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2015.png)
+![image.png](img/image%2015.png)
 
 - After you have enabled GuardDuty for your AWS account, GuardDuty begins monitoring your network and account activity.
 - You **do not have to deploy or manage any additional security software.**
@@ -1584,7 +1584,7 @@ For example →
     - fault tolerance
     - service limits.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2016.png)
+![image.png](img/image%2016.png)
 
 - For the checks in each category, Trusted Advisor offers a list of recommended actions and additional resources to learn more about AWS best practices.
 - The guidance provided by AWS Trusted Advisor can benefit your company at all stages of deployment.
@@ -1902,7 +1902,7 @@ Problem → customers need to get data to AWS and most of them would like to do 
 - These devices offer **different capacity points, and most include built-in computing capabilities**.
 - AWS owns and manages the Snow Family devices and integrates with AWS security, monitoring, storage management, and computing capabilities.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2017.png)
+![image.png](img/image%2017.png)
 
 ### AWS Snowcone
 
@@ -1910,7 +1910,7 @@ Problem → customers need to get data to AWS and most of them would like to do 
 - It features 2 CPUs, 4 GB of memory, and up to 14 TB of usable storage.
 - **Holds upto 8TB of data.**
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2018.png)
+![image.png](img/image%2018.png)
 
 ### AWS Snowball
 
@@ -1923,14 +1923,14 @@ Offers two types of devices:
     - Storage: 80-TB usable HDD capacity for Amazon S3 compatible object storage or Amazon EBS compatible block volumes and 28 TB of usable NVMe SSD capacity for Amazon EBS compatible block volumes.
     - Compute: 104 vCPUs, 416 GiB of memory, and an optional NVIDIA Tesla V100 GPU. Devices run Amazon EC2 sbe-c and sbe-g instances, which are equivalent to C5, M5a, G3, and P3 instances.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2019.png)
+![image.png](img/image%2019.png)
 
 ### AWS SnowMobile
 
 - It is an exabyte-scale data transfer service used to move large amounts of data to AWS.
 - You can transfer up to 100 petabytes of data per Snowmobile, a 45-foot long ruggedized shipping container, pulled by a semi trailer truck.
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2020.png)
+![image.png](img/image%2020.png)
 
 ## Innovate with AWS
 
@@ -2036,4 +2036,4 @@ To learn more on ways to innovate with AWS, expand each of the following three c
 
 [Elastic Compute Cloud (EC2)](https://www.notion.so/Elastic-Compute-Cloud-EC2-125e0021eb2d8173bb90edf826d2e508?pvs=21)
 
-![image.png](AWS%20Cloud%20Practitioner%20Course%20125e0021eb2d8096aa48f5a17c0dce0d/image%2021.png)
+![image.png](img/image%2021.png)
