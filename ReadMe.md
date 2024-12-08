@@ -1102,7 +1102,7 @@ In this module, you will learn how to:
 ```
 💡 Enabled to manage access to AWS services and resources securely
 
-</aside>
+```
 
 - Provides flexibility to configure access based on your company’s specific operational and security needs.
 - This can be done by using a combination of IAM features -
@@ -1202,7 +1202,7 @@ An IAM role is an identity **that you can assume to gain temporary access to per
 
 IAM roles are idea**l for situations in which access to services or resources needs to be granted temporarily**, instead of long-term.
 
-</aside>
+```
 
 ### Multi Factor Authentication
 
@@ -1211,7 +1211,7 @@ IAM roles are idea**l for situations in which access to services or resources ne
 
 In IAM, multi-factor authentication (MFA) **provides an extra layer of security** for your AWS account.
 
-</aside>
+```
 
 - After signing to AWS account using email and password, **the user is prompted for an authentication response from their AWS MFA device**.
 - This device could be a hardware security key, a hardware device, or an MFA application on a device such as a smartphone.
@@ -1223,7 +1223,7 @@ In IAM, multi-factor authentication (MFA) **provides an extra layer of security*
 
 **Central location to manage multiple AWS accounts**
 
-</aside>
+```
 
 - Creating an AWS Organization automatically creates a root, which is the parent container for all the accounts in your organization.
 - One can centrally control permissions for the accounts in the organization using Service Control Policies (SCPs).
@@ -1245,7 +1245,7 @@ In IAM, multi-factor authentication (MFA) **provides an extra layer of security*
 
 > A service that **provides on-demand access to AWS security and compliance reports and select online agreements**
 > 
-</aside>
+```
 
 AWS Artifact **provides access to AWS security and compliance documents**, such as AWS ISO certifications, Payment Card Industry (PCI) reports, and Service Organization Control (SOC) reports. 
 
@@ -1272,7 +1272,7 @@ AWS Artifact **provides access to AWS security and compliance documents**, such 
 
 **A deliberate attempt to make a website or application unavailable to users**
 
-</aside>
+```
 
 ![image.png](img/image%2013.png)
 
@@ -1317,7 +1317,7 @@ The aim is to exhaust the target’s resources, **rendering it unavailable to le
 
 Security Groups control traffic **before** it reaches the network interface of an EC2 instance, rather than filtering traffic once it is inside the instance.
 
-</aside>
+```
 
 - **Network-Level Filtering**
     - **Security Groups** are essentially virtual firewalls that operate at the **VPC (Virtual Private Cloud) level**, specifically at the **Elastic Network Interface (ENI)** level of your EC2 instance.
@@ -1364,7 +1364,7 @@ Security Groups control traffic **before** it reaches the network interface of a
 
 Because the ELB handles the http traffic request first, so it **waits until the entire message, no matter how fast or slow, is complete before sending** it over to the front end web server.
 
-</aside>
+```
 
 - **Idle Timeouts**: ELB has configurable idle timeout settings, which define how long to keep an open but inactive connection. If a Slowloris attack sends incomplete HTTP requests at a slow pace, ELB will automatically close the connection once the idle timeout period is reached, preventing the attacker from holding the connection open indefinitely.
 - This prevents the server from waiting indefinitely for the rest of the request, making Slowloris ineffective.
@@ -1376,7 +1376,7 @@ Because the ELB handles the http traffic request first, so it **waits until the 
 
 AWS Shield is a service that protects applications against DDoS attacks. AWS Shield provides two levels of protection: Standard and Advanced.
 
-</aside>
+```
 
 **AWS Shield Standard**
 
@@ -1437,7 +1437,7 @@ AWS Shield is a service that protects applications against DDoS attacks. AWS Shi
 
 Threat Detection Service
 
-</aside>
+```
 
 - A service that provides intelligent threat detection for your AWS infrastructure and resources.
 - **It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment.**
@@ -1459,7 +1459,7 @@ Threat Detection Service
 
 A web service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics.
 
-</aside>
+```
 
 - CloudWatch uses **metrics** to represent the data points for your resources.
 - AWS services send metrics to CloudWatch.
@@ -1492,7 +1492,7 @@ For example →
 
 **Records API calls for AWS account.**
 
-</aside>
+```
 
 - **The recorded information includes the identity of the API caller, the time of the API call, the source IP address of the API caller, and more.**
 - You can think of CloudTrail as a “trail” of breadcrumbs (or a log of actions) that someone has left behind them.
@@ -1516,7 +1516,7 @@ For example →
 
 **A web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices.**
 
-</aside>
+```
 
 - Trusted Advisor compares its findings to AWS best practices in five categories →
     - cost optimization
@@ -1612,7 +1612,7 @@ Use AWS Billing & Cost Management Dashboard to pay AWS bill, monitor your usage,
 
  AWS Organizations, a service that **enables you to manage multiple AWS accounts from a central location, it also provides the option for consolidated billing.**
 
-</aside>
+```
 
 - Receive single bill for all AWS accounts in OU.
 - By consolidating, one can easily track the combined costs of all the linked accounts in OU.
@@ -1630,7 +1630,7 @@ Use AWS Billing & Cost Management Dashboard to pay AWS bill, monitor your usage,
 
 **Create budgets to plan your service usage, service costs, and instance reservations.**
 
-</aside>
+```
 
 - Review how much cost your predicted AWS usage will incur by the end of the month
 
@@ -1643,7 +1643,7 @@ In AWS Budgets, you can also set custom alerts when your usage exceeds (or is fo
 
 **Tool that lets you visualize, understand, and manage your AWS costs and usage over time.**
 
-</aside>
+```
 
 - AWS Cost Explorer includes a **default report of the costs and usage for your top five cost-accruing AWS services**.
 - You can apply custom filters and groups to analyze your data. For example, you can view resource usage at the hourly level.
@@ -1709,7 +1709,7 @@ AWS offers 4 different support plans to **troubleshoot issues, lower costs and e
 
 The **Enterprise On-Ramp and Enterprise Support plans** include access to a **Technical Account Manager (TAM).**
 
-</aside>
+```
 
 - The TAM is your primary point of contact at AWS.
 - If your company subscribes to **Enterprise Support or Enterprise On-Ramp**, your TAM educates, empowers, and evolves your cloud journey across the full range of AWS services.
@@ -1726,7 +1726,7 @@ The **Enterprise On-Ramp and Enterprise Support plans** include access to a **Te
 
 **A digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.**
 
-</aside>
+```
 
 - For each listing in AWS Marketplace, you can access detailed information on pricing options, available support, and reviews from other AWS customers.
 - You can also explore software solutions by industry and use case.
@@ -1834,7 +1834,7 @@ When migrating applications to the cloud, six of the most common that you can i
 
 Problem → customers need to get data to AWS and most of them would like to do it in an efficient and timely manner. The usual route is to simply copy the required data over the internet or better yet, if they have a Direct Connect line. However, with the limitations of bandwidth, in general, this can take days, weeks, or even months. 
 
-</aside>
+```
 
 - Snow Family is a collection of physical devices that help to physically transport up to exabytes of data into and out of AWS.
 - Such that one can place an order via AWS Management Console we ship it to you, you plug it in and copy your data, and finally, ship it back to us.
@@ -1883,7 +1883,7 @@ When examining how to use AWS services, it is important to focus on the desired 
 - The current state
 - The desired state
 - The problems you are trying to solve
-</aside>
+```
 
 To learn more on ways to innovate with AWS, expand each of the following three categories.
 
