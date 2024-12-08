@@ -162,12 +162,9 @@
 
 # Load Balancing
 
-<aside>
-💡
-
-**The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones**
-
-</aside>
+```
+💡 The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones
+```
 
 - Method of distributing network traffic equally across a pool of resources that support an application.
 - LB is a device that sits between the user and the server group and acts an an invisible facilitator, ensuring that all resource server are used equally.
@@ -265,10 +262,9 @@ User requests to the application first go to the load balancer. The load balance
     - Tightly coupled components, components can be databases, servers, UI, business logic and so on.
     - If a single component fails, other components fail and possibly entire application.
 
-<aside>
+```
 💡 To help maintain application availability when a single component fails, you can design your application through a **micro-services** approach.
-
-</aside>
+```
 
 - Microservices -
     - Application components are loosely couples.
@@ -292,12 +288,9 @@ User requests to the application first go to the load balancer. The load balance
 
 # Global Infrastructure and Reliability
 
-<aside>
-💡
-
-**High availability and Fault tolerance**
-
-</aside>
+```
+💡 High availability and Fault tolerance**
+```
 
 # Objectives
 
@@ -335,12 +328,9 @@ When determining the right Region for your services, data, and applications, con
 
 ## Availability Zones
 
-<aside>
-💡
-
-**Problem - You don’t want to run application with data centre in a single building, because data centre in one location can fail for any number of unavoidable reasons.**
-
-</aside>
+```
+💡 Problem - You don’t want to run application with data centre in a single building, because data centre in one location can fail for any number of unavoidable reasons.**
+```
 
 - AWS has data centres all around the world.
 - Each region is made up of multiple data centres.
@@ -356,11 +346,9 @@ When determining the right Region for your services, data, and applications, con
     - However, if a disaster occurs in one part of the Region, they are distant enough to reduce the chance that multiple Availability Zones are affected.
 - **Do not run only 1 instances in 1 AZ.**
 
-<aside>
-💡
-
-- **Run across at least two Availability Zones in a Region**
-</aside>
+```
+💡 Run across at least two Availability Zones in a Region
+```
 
 - Many of the AWS services **run at the Region level, meaning they run synchronously across multiple AZs without any additional effort on your part.**
 - **Example → ELB is actually a regional construct.** It runs across all Availability Zones, communicating with the EC2 instances that are running in a specific Availability Zone.
@@ -391,11 +379,9 @@ When determining the right Region for your services, data, and applications, con
 
 ## Provision AWS Resources - How to interact with AWS resources ?
 
-<aside>
-💡
-
-- **Using AWS APIs → Pre-determined ways to interact with AWS services, one can invoke or call these APIs to provision, configure and manage AWS resources.**
-</aside>
+```
+💡 Using AWS APIs → Pre-determined ways to interact with AWS services, one can invoke or call these APIs to provision, configure and manage AWS resources.
+```
 
 ## AWS Management Console
 
@@ -478,12 +464,9 @@ When determining the right Region for your services, data, and applications, con
 
 ### Virtual Private Gateway
 
-<aside>
-💡
-
-**Creates a VPN connection between the VPC and the internal corporate network.**
-
-</aside>
+```
+💡 Creates a VPN connection between the VPC and the internal corporate network.
+```
 
 - To access private resources in a VPC, you can use a **virtual private gateway**.
 - The virtual private gateway is the component that **allows protected internet traffic** to enter into the VPC.
@@ -495,12 +478,9 @@ When determining the right Region for your services, data, and applications, con
 
 ### AWS Direct Connect
 
-<aside>
-💡
-
-**The point being is you still want a private connection, but you want it to be dedicated and shared with no one else. You want the lowest amount of latency possible with the highest amount of security possible.**
-
-</aside>
+```
+💡 The point being is you still want a private connection, but you want it to be dedicated and shared with no one else. You want the lowest amount of latency possible with the highest amount of security possible.
+```
 
 - Direct Connect allows you to establish a **completely private, dedicated fiber connection from your data centre to AWS**.
 - You work with a Direct Connect partner in your area to establish this connection, AWS Direct Connect provides a physical line that connects your network to your AWS VPC.
@@ -513,12 +493,9 @@ When determining the right Region for your services, data, and applications, con
 
 # Subnets and Network Access control List (NACL)
 
-<aside>
-💡
-
-A subnet is a section of a VPC in which you can **group resources based on security or operational needs**. Subnets can be **public or private.**
-
-</aside>
+```
+💡 A subnet is a section of a VPC in which you can **group resources based on security or operational needs. Subnets can be public or private.
+```
 
 - **Public subnets** contain resources that need to be accessible by the public, such as an online store’s website.
 - **Private subnets** contain resources that should be **accessible only through your private network**, such as a database that contains customers’ personal information and order histories.
@@ -536,12 +513,9 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 
 ## Network ACL → At subnet level
 
-<aside>
-💡
-
-**A network ACL is a virtual firewall that controls inbound and outbound traffic at the subnet level.**
-
-</aside>
+```
+💡 A network ACL is a virtual firewall that controls inbound and outbound traffic at the subnet level.
+```
 
 - Each AWS account includes a default network ACL.
 - When configuring VPC, you can use your **account’s default network ACL** or **create custom network ACLs**.
@@ -562,12 +536,9 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 
 ## Security Groups → At EC2 level
 
-<aside>
-💡
-
-**A security group is a virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.**
-
-</aside>
+```
+💡 A security group is a virtual firewall that controls inbound and outbound traffic for an Amazon EC2 instance.
+```
 
 - By default, a security group **denies all inbound traffic and allows all outbound traffic**.
 - You can add **custom rules to configure which traffic should be allowed**; any other traffic would then be denied.
@@ -603,12 +574,9 @@ A subnet is a section of a VPC in which you can **group resources based on secur
 
 ## Domain Name System (dns)
 
-<aside>
-💡
-
-**the phonebook of the internet.**
-
-</aside>
+```
+💡 The phonebook of the internet.
+```
 
 It translates human-readable domain names (like `www.example.com`) into IP addresses (like `192.0.2.1`) that computers use to identify each other on the network.
 
@@ -664,12 +632,9 @@ Suppose that AnyCompany’s application is running on several Amazon EC2 instanc
 
 ## Instance Stores
 
-<aside>
-💡
-
-**Block-level storage volumes behave like physical hard drives.**
-
-</aside>
+```
+💡 Block-level storage volumes behave like physical hard drives.
+```
 
 - An instance store provides temporary block-level storage for an Amazon EC2 instance.
 - An instance store is **disk storage that is physically attached to the host computer for an EC2 instance**, and therefore **has the same lifespan as the instance**.
@@ -702,12 +667,9 @@ All data on the attached instance store is deleted.
 
 ### EBS Snapshots
 
-<aside>
-💡
-
-**Incremental backup of EBS Volume**
-
-</aside>
+```
+💡 Incremental backup of EBS Volume
+```
 
 - This means that the first backup taken of a volume copies all the data.
 - For subsequent backups, only the blocks of data that have changed since the most recent snapshot are saved.
@@ -727,21 +689,15 @@ All data on the attached instance store is deleted.
 
 ![image.png](img/image%2010.png)
 
-<aside>
-💡
-
-**when you modify a file in block storage, only the pieces that are changed are updated. When a file in object storage is modified, the entire object is updated.**
-
-</aside>
+```
+💡 When you modify a file in block storage, only the pieces that are changed are updated. When a file in object storage is modified, the entire object is updated.**
+```
 
 ## Amazon Simple Storage Service (S3)
 
-<aside>
-💡
-
-**service that provides object-level storage. Amazon S3 stores data as objects in buckets.**
-
-</aside>
+```
+💡 Service that provides object-level storage. Amazon S3 stores data as objects in buckets.
+```
 
 - **Store data as objects. Store objects in buckets.**
 - You can upload any type of file to Amazon S3, such as images, videos, text files, and so on.
@@ -960,12 +916,9 @@ Amazon RDS is available on six database engines, which optimize for memory, perf
 |  | Granular API access |
 | **Use-case** → you have a sales supply chain management system that you have to analyze for weak spots. Using RDS is the clear winner here because it's built for business analytics, because you need complex relational joins. | **Use-case** →  imagine you have an employee contact list: names, phone numbers, emails, employee IDs. Well, this is all single table territory. I could use a relational database for this, but the things that make relational databases great, all of that complex functionality, creates overhead and lag and expense if you're not actually using it. By eliminating all the overhead, DynamoDB allows you to build powerful, incredibly fast databases where you don't need complex joint functionality. |
 
-<aside>
-💡
-
-**Each service is the right service for specific needs**
-
-</aside>
+```
+💡 Each service is the right service for specific needs
+```
 
 ## Data-warehousing with Amazon Redshift
 
@@ -993,12 +946,9 @@ Amazon RDS is available on six database engines, which optimize for memory, perf
 
 ## AWS Database Migration Service or Amazon DMS
 
-<aside>
-💡
-
-**DMS helps to migrate existing databases onto AWS in a secure and easy fashion.**
-
-</aside>
+```
+💡 DMS helps to migrate existing databases onto AWS in a secure and easy fashion.
+```
 
 - Migration happens between a source and a target database.
 - The best part is that the source database remains fully operational during the migration, minimizing downtime to applications that rely on that database.
@@ -1129,11 +1079,9 @@ In this module, you will learn how to:
 - Customers are responsible for the **security of everything that they create and put *in* the AWS Cloud.**
 - When using AWS services, the customer, **maintain complete control over your content**.
 
-<aside>
-💡
-
-- You are responsible for **managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content**. You also **control how access rights are granted, managed, and revoked.**
-</aside>
+```
+💡 You are responsible for **managing security requirements for your content, including which content you choose to store on AWS, which AWS services you use, and who has access to that content. You also control how access rights are granted, managed, and revoked.
+```
 
 - The security steps that you take will depend on factors such as the **services that you use, the complexity of your systems, and your company’s specific operational and security needs**.
 - Steps include **selecting, configuring, and patching the operating systems that will run on Amazon EC2 instances, configuring security groups, and managing user accounts**.
@@ -1151,10 +1099,8 @@ In this module, you will learn how to:
 
 ## AWS Identity and Access Management (IAM)
 
-<aside>
-💡
-
-**Enabled to manage access to AWS services and resources securely**
+```
+💡 Enabled to manage access to AWS services and resources securely
 
 </aside>
 
@@ -1170,17 +1116,15 @@ In this module, you will learn how to:
 - The root user is accessed by **signing in with the email address and password that you used to create your AWS account.**
 - It has **complete access to all the AWS services and resources** in the account.
 
-<aside>
-💡
-
-**Best Practise:**
+```
+💡 Best Practise:
 
 - Do **not** use the root user for everyday tasks.
 - Instead, use the root user to create your first IAM user and assign it permissions to create other users.
 - Then, continue to create other IAM users, and access those identities for performing regular tasks throughout AWS.
 - **Only use the root user when you need to perform a limited number of tasks** that are only available to the root user.
 - Examples of these tasks include changing your root user email address and changing your AWS support plan.
-</aside>
+```
 
 ### IAM Users
 
@@ -1192,16 +1136,14 @@ In this module, you will learn how to:
 
 ![image.png](img/image%2011.png)
 
-<aside>
-💡
-
-**Best practice:**
+```
+💡 Best practice:
 
 We recommend that you **create individual IAM users for each person who needs to access AWS**.
 
 Even if you have multiple employees who require the same level of access, you should create individual IAM users for each of them. **This provides additional security by allowing each IAM user to have a unique set of security credentials.**
 
-</aside>
+```
 
 ### IAM Policy
 
@@ -1209,7 +1151,7 @@ Even if you have multiple employees who require the same level of access, you sh
 - Enables to customer user’s levels of access to resources.
 - Example → Allow users to access all of the S3 bucket within account or only specific bucket.
 
-<aside>
+```
 💡
 
 **Best practice:**
@@ -1220,7 +1162,7 @@ By following this principle, you help **to prevent users or roles from having mo
 
 For example, if an employee needs access to only a specific bucket, specify the bucket in the IAM policy. Do this instead of granting the employee access to all of the buckets in your AWS account.
 
-</aside>
+```
 
 ![Screenshot 2024-10-20 at 5.47.47 PM.png](img/Screenshot_2024-10-20_at_5.47.47_PM.png)
 
@@ -1230,12 +1172,12 @@ The IAM policy is **allowing** an action of ”**returning some or all of object
 
 ### IAM Groups
 
-<aside>
+```
 💡
 
 **Collection of IAM Users**
 
-</aside>
+```
 
 - When you assign an IAM policy to a group, all users in the group are granted permissions specified by the policy.
 
@@ -1243,17 +1185,17 @@ The IAM policy is **allowing** an action of ”**returning some or all of object
 
 ### IAM Roles
 
-<aside>
+```
 💡
 
 An IAM role is an identity **that you can assume to gain temporary access to permissions**.
 
-</aside>
+```
 
 - Before an IAM user, application, or service **can assume an IAM role, they must be granted permissions to switch to the role**.
 - When someone assumes an IAM role, **they abandon all previous permissions that they had under a previous role and assume the permissions of the new role**.
 
-<aside>
+```
 💡
 
 **Best practice:**
@@ -1264,7 +1206,7 @@ IAM roles are idea**l for situations in which access to services or resources ne
 
 ### Multi Factor Authentication
 
-<aside>
+```
 💡
 
 In IAM, multi-factor authentication (MFA) **provides an extra layer of security** for your AWS account.
@@ -1276,7 +1218,7 @@ In IAM, multi-factor authentication (MFA) **provides an extra layer of security*
 
 ## AWS Organizations
 
-<aside>
+```
 💡
 
 **Central location to manage multiple AWS accounts**
@@ -1298,7 +1240,7 @@ In IAM, multi-factor authentication (MFA) **provides an extra layer of security*
 
 ## Compliance → AWS Artifact
 
-<aside>
+```
 💡
 
 > A service that **provides on-demand access to AWS security and compliance reports and select online agreements**
@@ -1325,7 +1267,7 @@ AWS Artifact **provides access to AWS security and compliance documents**, such 
 
 ## Denial-of-Service Attacks
 
-<aside>
+```
 💡
 
 **A deliberate attempt to make a website or application unavailable to users**
@@ -1368,7 +1310,7 @@ The aim is to exhaust the target’s resources, **rendering it unavailable to le
 
 ### AWS Solution for UDP Flood → Security Group
 
-<aside>
+```
 💡
 
 **Security group operates at the AWS Network Level, not at the EC2 Instance level.**
@@ -1417,7 +1359,7 @@ Security Groups control traffic **before** it reaches the network interface of a
 
 **Elastic Load Balancer →**
 
-<aside>
+```
 💡
 
 Because the ELB handles the http traffic request first, so it **waits until the entire message, no matter how fast or slow, is complete before sending** it over to the front end web server.
@@ -1429,7 +1371,7 @@ Because the ELB handles the http traffic request first, so it **waits until the 
 
 ### AWS Shield
 
-<aside>
+```
 💡
 
 AWS Shield is a service that protects applications against DDoS attacks. AWS Shield provides two levels of protection: Standard and Advanced.
@@ -1490,7 +1432,7 @@ AWS Shield is a service that protects applications against DDoS attacks. AWS Shi
 
 ### Amazon GuardDuty
 
-<aside>
+```
 💡
 
 Threat Detection Service
@@ -1512,7 +1454,7 @@ Threat Detection Service
 
 ## AWS CloudWatch
 
-<aside>
+```
 💡
 
 A web service that enables you to monitor and manage various metrics and configure alarm actions based on data from those metrics.
@@ -1545,7 +1487,7 @@ For example →
 
 ## AWS CloudTrail
 
-<aside>
+```
 💡
 
 **Records API calls for AWS account.**
@@ -1569,7 +1511,7 @@ For example →
 
 ## AWS Trusted Advisor
 
-<aside>
+```
 💡
 
 **A web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices.**
@@ -1665,7 +1607,7 @@ Use AWS Billing & Cost Management Dashboard to pay AWS bill, monitor your usage,
 
 ## Consolidated Billing
 
-<aside>
+```
 💡
 
  AWS Organizations, a service that **enables you to manage multiple AWS accounts from a central location, it also provides the option for consolidated billing.**
@@ -1683,7 +1625,7 @@ Use AWS Billing & Cost Management Dashboard to pay AWS bill, monitor your usage,
 
 ## AWS Budgets
 
-<aside>
+```
 💡
 
 **Create budgets to plan your service usage, service costs, and instance reservations.**
@@ -1696,7 +1638,7 @@ In AWS Budgets, you can also set custom alerts when your usage exceeds (or is fo
 
 ## AWS Cost explorer
 
-<aside>
+```
 💡
 
 **Tool that lets you visualize, understand, and manage your AWS costs and usage over time.**
@@ -1762,7 +1704,7 @@ AWS offers 4 different support plans to **troubleshoot issues, lower costs and e
 
 ### Technical Account Manager (TAM)
 
-<aside>
+```
 💡
 
 The **Enterprise On-Ramp and Enterprise Support plans** include access to a **Technical Account Manager (TAM).**
@@ -1779,7 +1721,7 @@ The **Enterprise On-Ramp and Enterprise Support plans** include access to a **Te
 
 ## AWS Marketplace
 
-<aside>
+```
 💡
 
 **A digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.**
@@ -1887,7 +1829,7 @@ When migrating applications to the cloud, six of the most common that you can i
 
 ## AWS Snow Family
 
-<aside>
+```
 💡
 
 Problem → customers need to get data to AWS and most of them would like to do it in an efficient and timely manner. The usual route is to simply copy the required data over the internet or better yet, if they have a Direct Connect line. However, with the limitations of bandwidth, in general, this can take days, weeks, or even months. 
@@ -1933,7 +1875,7 @@ Offers two types of devices:
 
 ## Innovate with AWS
 
-<aside>
+```
 💡
 
 When examining how to use AWS services, it is important to focus on the desired outcomes. You are properly equipped to drive innovation in the cloud if you can clearly articulate the following conditions:
